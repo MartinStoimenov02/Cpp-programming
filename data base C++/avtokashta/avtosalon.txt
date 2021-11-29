@@ -1,0 +1,15 @@
+marka:audimarka:fordmarka:golfmarka:fordgodina na proizvodstvo:0cviat:cena:1.02841e-038marka:godina na proizvodstvo:0cviat:pcena:0marka:_@godina na proizvodstvo:1417083392cviat:√cena:6.52986e-039marka:fordgodina na proizvodstvo:2014cviat:sincena:20000marka:audigodina na proizvodstvo:2020cviat:chervencena:25000marka:volkswagengodina na proizvodstvo:1993cviat:bialcena:3000
+[1]marka:ford
+godina na proizvodstvo:2014
+cviat:син
+cena:20000
+
+[2]marka:audi
+godina na proizvodstvo:2020
+cviat:червен
+cena:25000
+
+[3]marka:volkswagen
+godina na proizvodstvo:1993
+cviat:бял
+cena:3000
