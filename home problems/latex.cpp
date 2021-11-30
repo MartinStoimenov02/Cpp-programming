@@ -1,47 +1,70 @@
 #include <iostream>
+#include<stack>
+#include<cmath>
+#include<iomanip>
 using namespace std;
 int main()
 {
-double a; //shirina
-double b; //dalzhina 
-double h; //visochina 
-double a1; //vrata shirina 
-double h1; //vrata visochina 
-double a2; //prozorec shirina 
-double h2; //prozorec visochina 
-double S; //lice
-double l1;//kolko litra e edna kofa
-double c;//edinichna cena na kofa
-double c1;//krajna cena za potrbitelq
-double l;//neobhodimi litri za boqdisvane na staqta
-double g;//brojj kofi
- cout << "shirina na staqta:";
+double a, b, h, a1, h1, a2, h2, d, pr, vr, l1, l, S, c, c1, g;
+int n, n1;
+stack<double>shir;
+stack<double>vis;
+ cout << "dulzhina na staqta:";
     cin >>a;
-    cout << "dulzhina na staqta:";
+    cout << "Shirina na staqta:";
     cin>>b;
-    cout << "viso`ina na staqta:";
+    cout << "Visochina na staqta:";
     cin>>h;
-     cout << "shirina na vratata:";
-    cin >>a1;
-    cout << "visochina na vratata:";
-    cin>>h1;
-    cout << "shirina na prozoreca:";
-    cin>>a2;
-     cout << "visochina na prozoreca:";
-    cin >>h2;
     cout << "obem na edna kofa:";
     cin >>l1;
     cout << "edinichna cena za kofa:";
     cin >>c;
-    S=((2*a*h+2*b*h)+(a*b))-((a1*h1)+(a2*h2))
-     ;cout << "S (lice)=" << S<<endl;
-     l=S*1
-     ;cout << "l(neobhodimi litri latex) =" << l<<endl;
-     g=l/l1
-     ;cout << "g(broi kofi)=" << g <<endl;
-     c1=c*g;
-     ;cout << "c1(obshta cena)=" << c1<<endl;
-     system ("pause");
-    ;return 0;
+    cout<<"broq na prozorcite:";
+    cin>>n;
+    cout<<"broq na vratite:";
+    cin>>n1;
+    for(int i=1; i<=n; i++)
+    {
+    cout << "shirina na prozorec"<<"["<<i<<"]"<<":";
+    cin >>a1;
+    shir.push(a1);
+    cout << "visochina na prozorec"<<"["<<i<<"]"<<":";
+    cin>>h1;
+    vis.push(h1);
+	}
+	while(!vis.empty())
+	{
+		d=shir.top()*vis.top();
+		pr=d+pr;
+		shir.pop();
+		vis.pop();
+	}
+	d=0;
+	for(int i=1; i<=n1; i++)
+    {
+    cout << "shirina na vrata"<<"["<<i<<"]"<<":";
+    cin >>a2;
+    shir.push(a2);
+    cout << "visochina na vrata"<<"["<<i<<"]"<<":";
+    cin>>h2;
+    vis.push(h2);
+	}
+	while(!vis.empty())
+	{
+		d=shir.top()*vis.top();
+		vr=d+vr;
+		shir.pop();
+		vis.pop();
+	}
+	S=((2*a*h)+(2*b*h))-(pr+vr);
+	cout<<"Obshta kvadratura:"<<S<<endl;
+    l=S*1;
+    cout << "neobhodimi litri latex=" << l<<endl;
+    g=l/l1;
+    g=ceil(g);
+    cout << "broi kofi=" << g <<endl;
+    c1=c*g;
+    cout << "obshta cena=" << c1<<endl;
+    system ("pause");
+    return 0;
 }
-
