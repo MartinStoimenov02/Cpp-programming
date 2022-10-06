@@ -13,3 +13,13 @@ cena:25000
 godina na proizvodstvo:1993
 cviat:бял
 cena:3000
+
+[1]marka:ford
+godina na proizvodstvo:2014
+cviat:siv
+cena:20000
+
+[2]marka:reno
+godina na proizvodstvo:2010
+cviat:red
+cena:10000

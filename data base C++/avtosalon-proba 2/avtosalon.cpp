@@ -54,3 +54,23 @@ cena:0
 godina na proizvodstvo:-2107246080
 cviat:ü
 cena:6.52997e-039
+
+[1]marka:ford
+godina na proizvodstvo:0
+cviat:
+cena:0
+
+[2]marka:
+godina na proizvodstvo:0
+cviat:
+cena:0
+
+[1]marka:ford
+godina na proizvodstvo:2010
+cviat:siv
+cena:10000
+
+[2]marka:reno
+godina na proizvodstvo:2000
+cviat:red
+cena:5000
